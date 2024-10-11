@@ -4,5 +4,18 @@
     "build": "deno run -A --node-modules-dir npm:vite build",
     "preview": "deno run -A --node-modules-dir npm:vite preview",
     "serve": "deno run --allow-net --allow-read https://deno.land/std@0.157.0/http/file_server.ts dist/"
+  },
+  "imports": {
+    "@types/react": "npm:@types/react@^18.3.11",
+    "react": "npm:react@^18.3.1",
+    "react-dom": "npm:react-dom@^18.3.1",
+    "react-router-dom": "npm:react-router-dom@^6.27.0"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "lib": [
+        "deno.window",
+        "dom"
+    ]
   }
 }
