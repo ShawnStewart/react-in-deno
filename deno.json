@@ -3,6 +3,32 @@
     "dev": "deno run -A --node-modules-dir npm:vite",
     "build": "deno run -A --node-modules-dir npm:vite build",
     "preview": "deno run -A --node-modules-dir npm:vite preview",
-    "serve": "deno run --allow-net --allow-read https://deno.land/std@0.157.0/http/file_server.ts dist/"
+    "serve": "deno run --allow-net --allow-read https://deno.land/std@0.157.0/http/file_server.ts dist/",
+    "esm:add": "deno run -A https://esm.sh/v135 add",
+    "esm:update": "deno run -A https://esm.sh/v135 update",
+    "esm:remove": "deno run -A https://esm.sh/v135 remove"
+  },
+  "imports": {
+    "react-dom": "https://esm.sh/v135/*react-dom@18.3.1",
+    "react-dom/": "https://esm.sh/v135/*react-dom@18.3.1/",
+    "react-router-dom": "https://esm.sh/v135/*react-router-dom@6.27.0",
+    "react": "https://esm.sh/v135/react@18.3.1",
+    "react/": "https://esm.sh/v135/react@18.3.1/"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "lib": [
+        "deno.window",
+        "dom"
+    ]
+  },
+  "scopes": {
+    "https://esm.sh/v135/": {
+      "@remix-run/router": "https://esm.sh/v135/@remix-run/router@1.20.0",
+      "loose-envify": "https://esm.sh/v135/loose-envify@1.4.0",
+      "react-router": "https://esm.sh/v135/react-router@6.27.0",
+      "scheduler": "https://esm.sh/v135/scheduler@0.23.2"
+    }
   }
 }
