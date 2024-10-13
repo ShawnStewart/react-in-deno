@@ -19,8 +19,8 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "lib": [
-        "deno.window",
-        "dom"
+      "deno.window",
+      "dom"
     ]
   },
   "scopes": {
